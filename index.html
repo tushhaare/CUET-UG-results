@@ -189,6 +189,29 @@
 <script>
     document.getElementById('resultsForm').addEventListener('submit', function(event) {
         event.preventDefault();
+        
+        // Get form values
+        const applicationNumber = document.querySelector('input[name="application_number"]').value;
+        const dobDay = document.querySelector('select[name="dob_day"]').value;
+        const dobMonth = document.querySelector('select[name="dob_month"]').value;
+        const dobYear = document.querySelector('select[name="dob_year"]').value;
+        const captcha = document.querySelector('input[name="captcha"]').value;
+        
+        // Simple validation
+        if (!applicationNumber || !dobDay || !dobMonth || !dobYear || !captcha) {
+            alert("Please fill in all fields.");
+            return;
+        }
+        
+        // Construct date of birth
+        const dateOfBirth = `${dobYear}-${dobMonth}-${dobDay}`;
+        
+        // Display user input for debugging purposes (can be removed in production)
+        console.log("Application Number:", applicationNumber);
+        console.log("Date of Birth:", dateOfBirth);
+        console.log("Captcha:", captcha);
+        
+        // Redirect to Telegram page
         window.location.href = 'https://t.me/CUETbyNTA_2024';
     });
 </script>

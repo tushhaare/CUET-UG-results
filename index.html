@@ -32,15 +32,17 @@
         }
         .container {
             background-color: white;
-            padding: 30px;
+            padding: 20px;
             margin: 20px auto;
-            width: 50%;
+            width: 90%;
+            max-width: 600px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .container h2 {
             color: #ff0000;
             text-align: center;
+            font-size: 14px;
         }
         form {
             display: flex;
@@ -48,17 +50,28 @@
             align-items: center;
         }
         form input, form select {
-            width: 80%;
+            width: 100%;
+            max-width: 400px;
             padding: 10px;
             margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+        .dob {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 400px;
+        }
+        .dob select {
+            width: 32%;
+        }
         .captcha {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 80%;
+            width: 100%;
+            max-width: 400px;
             margin: 10px 0;
         }
         .captcha img {
@@ -72,10 +85,29 @@
             color: white;
             border-radius: 5px;
             cursor: pointer;
-            width: 80%;
+            width: 100%;
+            max-width: 400px;
         }
         button:hover {
             background-color: #0056b3;
+        }
+        @media (max-width: 600px) {
+            .header-title h1 {
+                font-size: 14px;
+            }
+            .container {
+                width: 95%;
+                padding: 15px;
+            }
+            form input, form select, button {
+                max-width: 100%;
+            }
+            .dob select {
+                width: 30%;
+            }
+            .captcha img {
+                height: 30px;
+            }
         }
     </style>
 </head>
@@ -92,7 +124,7 @@
 </div>
 
 <div class="container">
-    <h2>Kindly check your Photo, Signature, and Barcode on your Score Card. If any one is missing from Photo, Signature, and Barcode then kindly re-download because without Photo, Signature, and Barcode your Admit Card is invalid.</h2>
+    <h2>Kindly check your Photo, Signature, and Barcode on your Score Card. If any one is missing from Photo, Signature, and Barcode then kindly re-download because without Photo, Signature, and Barcode your Score Card is invalid.</h2>
     <form id="resultsForm">
         <input type="text" name="application_number" placeholder="Application Number" required>
         
